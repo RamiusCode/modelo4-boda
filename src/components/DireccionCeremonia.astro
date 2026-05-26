@@ -7,6 +7,20 @@
                 class="relative w-full max-w-md sm:max-w-lg md:max-w-xl"
                 id="card-ceremonia"
             >
+                <!-- BOTÓN DECORATIVO SUPERIOR -->
+                <div
+                    class="absolute z-20"
+                    style="top: -30px; left: 50%; transform: translateX(-50%);"
+                >
+                    <div class="w-16 h-16" id="boton-decorativo-ceremonia">
+                        <img
+                            src="/imagenes/boton.png"
+                            alt="Decoración"
+                            class="w-full h-full object-contain"
+                        />
+                    </div>
+                </div>
+
                 <div
                     class="relative rounded-2xl shadow-xl overflow-hidden"
                     style="background-color: #e8dcc8;"
@@ -20,7 +34,7 @@
 
                     <!-- Contenido de la card - LAYOUT CON TÍTULO EXTENDIDO -->
                     <div
-                        class="relative px-4 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12 z-10"
+                        class="relative px-4 pt-14 pb-8 sm:px-8 sm:pt-16 sm:pb-10 md:px-10 md:pt-16 md:pb-12 z-10"
                     >
                         <!-- TÍTULO: CEREMONIA RELIGIOSA - OCUPA TODO EL ANCHO -->
                         <div class="mb-2">
@@ -56,7 +70,7 @@
                                         class="font-crimson text-xl sm:text-lg md:text-xl texto-ceremonia font-semibold"
                                         id="nombre-parroquia"
                                     >
-                                        Parroquia San Pedro<br />CBBA
+                                        Parroquia "Sagrado Corazón de Jesús"
                                     </p>
                                 </div>
 
@@ -66,9 +80,8 @@
                                         class="font-crimson text-xl sm:text-sm md:text-base texto-ceremonia"
                                         id="direccion-parroquia"
                                     >
-                                        Av. Heroínas y<br />
-                                        J. Arauco Referencia<br />
-                                        (Parque La Torre)
+                                        Av. 6 de Agosto N° 2730,<br />
+                                        esquina Calle Fernando Guachalla
                                     </p>
                                 </div>
 
@@ -78,14 +91,14 @@
                                         class="font-crimson text-xl sm:text-base md:text-lg leading-tight texto-ceremonia font-semibold"
                                         id="hora-ceremonia"
                                     >
-                                        Hora: 13:30 PM
+                                        Hora: 15:00
                                     </p>
                                 </div>
 
                                 <!-- BOTÓN VER UBICACIÓN -->
                                 <div class="mt-4">
                                     <a
-                                        href="https://maps.app.goo.gl/mT5p87FNW1CeAcmJ9"
+                                        href="https://maps.app.goo.gl/qhVmESGg5jGdRhGy8"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         class="inline-block px-4 py-2 sm:px-6 sm:py-2.5 border-2 rounded-full font-crimson text-base sm:text-sm uppercase tracking-wider transition-all duration-300 btn-ubicacion-ceremonia font-semibold"
@@ -114,33 +127,64 @@
 
     if (typeof window !== "undefined") {
         document.addEventListener("DOMContentLoaded", () => {
-            console.log("⛪ Iniciando animaciones de ceremonia...");
 
-            // 🎯 ANIMACIÓN ELEGANTE DE ENTRADA - TODO AL MISMO TIEMPO
-            gsap.fromTo(
-                "#card-ceremonia",
-                {
-                    opacity: 0,
-                    scale: 0.85,
-                    y: 60,
-                    rotationY: -15,
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#card-ceremonia",
+                    start: "top 80%",
+                    toggleActions: "play none none reset",
                 },
-                {
-                    opacity: 1,
-                    scale: 1,
-                    y: 0,
-                    rotationY: 0,
-                    duration: 1.2,
-                    ease: "power3.out",
-                    scrollTrigger: {
-                        trigger: "#card-ceremonia",
-                        start: "top 80%",
-                        once: true,
-                    },
-                },
+            });
+
+            // Todos arrancan al mismo tiempo, cada uno con su propio movimiento
+            tl.fromTo(
+                "#boton-decorativo-ceremonia",
+                { opacity: 0 },
+                { opacity: 1, duration: 1.2, ease: "sine.out" },
+                0
+            )
+            .fromTo(
+                "#card-ceremonia > div",
+                { opacity: 0, y: 40 },
+                { opacity: 1, y: 0, duration: 1.3, ease: "power2.out" },
+                0
+            )
+            .fromTo(
+                "#titulo-ceremonia",
+                { opacity: 0, y: -22 },
+                { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" },
+                0
+            )
+            .fromTo(
+                "#icono-iglesia",
+                { opacity: 0, x: -28 },
+                { opacity: 1, x: 0, duration: 1.2, ease: "power2.out" },
+                0
+            )
+            .fromTo(
+                "#nombre-parroquia",
+                { opacity: 0, x: 28 },
+                { opacity: 1, x: 0, duration: 1.2, ease: "power2.out" },
+                0
+            )
+            .fromTo(
+                "#direccion-parroquia",
+                { opacity: 0, y: 22 },
+                { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" },
+                0
+            )
+            .fromTo(
+                "#hora-ceremonia",
+                { opacity: 0, y: 22 },
+                { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" },
+                0
+            )
+            .fromTo(
+                "#btn-ubicacion",
+                { opacity: 0 },
+                { opacity: 1, duration: 1.3, ease: "sine.out" },
+                0
             );
-
-            console.log("⛪✨ ¡Animaciones de ceremonia activadas!");
         });
     }
 </script>

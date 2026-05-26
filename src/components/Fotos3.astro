@@ -1,33 +1,18 @@
 <!-- ═══════════════════════════════════════════════════════════ --><!-- 📸 SECCIÓN: GALERÍA DE FOTOS                                --><!-- ═══════════════════════════════════════════════════════════ -->
 <section class="relative w-full py-2 sm:py-20 md:py-24 lg:py-32">
-    <div class="max-w-6xl mx-auto pt-4 pe-8 pb-4 ps-4 sm:px-6 lg:px-8">
-        <!-- CONTENEDOR DE FOTOS -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- CONTENEDOR DE FOTO ÚNICA -->
         <div class="relative w-full max-w-md mx-auto">
-            <!-- FOTO GRANDE - IZQUIERDA/ARRIBA -->
             <div
                 id="foto1"
                 class="relative w-full aspect-[4/5] rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
-                data-aos="fade-right"
+                data-aos="fade-up"
                 data-aos-duration="800"
                 data-aos-delay="100"
             >
                 <img
                     src="/imagenes/foto1.png"
-                    alt="Foto 1"
-                    class="w-full h-full object-cover"
-                />
-            </div>
-            <!-- FOTO PEQUEÑA - DERECHA/ABAJO -->
-            <div
-                id="foto2"
-                class="absolute bottom-0 right-2 w-[45%] aspect-[4/5] rounded-lg shadow-lg overflow-hidden cursor-pointer translate-x-6 translate-y-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
-                data-aos="fade-left"
-                data-aos-duration="800"
-                data-aos-delay="300"
-            >
-                <img
-                    src="/imagenes/foto2.png"
-                    alt="Foto 2"
+                    alt="Foto"
                     class="w-full h-full object-cover"
                 />
             </div>
@@ -97,7 +82,6 @@
         const modal = document.getElementById("modalFoto");
         const modalImage = document.getElementById("modalImage");
         const foto1 = document.getElementById("foto1");
-        const foto2 = document.getElementById("foto2");
         const btnCerrar = document.getElementById("btnCerrar");
 
         // Función para abrir modal
@@ -107,7 +91,6 @@
             modal.classList.add("flex");
             document.body.style.overflow = "hidden";
 
-            // Animación de entrada
             setTimeout(() => {
                 modal.style.opacity = "1";
             }, 10);
@@ -123,17 +106,10 @@
             }, 300);
         }
 
-        // Click en foto 1
+        // Click en foto
         if (foto1) {
             foto1.addEventListener("click", function () {
-                abrirModal("/imagenes/foto1.png");
-            });
-        }
-
-        // Click en foto 2
-        if (foto2) {
-            foto2.addEventListener("click", function () {
-                abrirModal("/imagenes/foto1.png");
+                abrirModal("/imagenes/foto5.png");
             });
         }
 

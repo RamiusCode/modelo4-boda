@@ -1,15 +1,17 @@
-<!-- ═══════════════════════════════════════════════════════════ --><!-- 🎁 SECCIÓN: SUGERENCIA DE REGALES                           --><!-- ═══════════════════════════════════════════════════════════ -->
+---
+// DespedidaDedicatoria.astro
+---
+
 <section class="relative w-full py-16 sm:py-20 md:py-24 lg:py-32">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- 📇 CARD DE MESA DE REGALOS -->
         <div class="flex justify-center">
-            <div class="relative w-[300px]" id="card-regalos">
+            <div class="relative w-[300px]" id="card-despedida">
                 <!-- BOTÓN DECORATIVO SUPERIOR -->
                 <div
                     class="absolute z-20"
                     style="top: -30px; left: 50%; transform: translateX(-50%);"
                 >
-                    <div class="w-16 h-16" id="boton-decorativo-regalos">
+                    <div class="w-16 h-16" id="boton-decorativo-despedida">
                         <img
                             src="/imagenes/boton.png"
                             alt="Decoración"
@@ -21,63 +23,94 @@
                 <!-- CARD PRINCIPAL -->
                 <div
                     class="relative rounded-[40px] shadow-xl overflow-hidden bg-[#f5f5f5]"
-                    id="card-principal-regalos"
+                    id="card-principal-despedida"
                 >
                     <!-- IMAGEN DE FONDO -->
                     <img
                         src="/imagenes/azul.png"
-                        alt="Fondo mesa regalos"
+                        alt="Fondo despedida"
                         class="absolute inset-0 w-full h-full object-cover"
                     />
 
-                    <!-- Contenido de la card -->
+                    <!-- Contenido -->
                     <div
-                        class="relative px-4 pt-16 pb-12 z-10 flex flex-col items-center"
+                        class="relative px-6 py-12 z-10 flex flex-col items-center"
                     >
-                        <!-- TÍTULO PRINCIPAL -->
-                        <div class="text-center mb-6" id="titulo-regalos">
+                        <!-- TÍTULO -->
+                        <div class="text-center mb-6" id="titulo-despedida">
                             <h2
                                 class="font-great-vibes text-[2.25rem] text-white leading-tight"
                             >
-                                Sugerencia de Regalos
+                                Querida Familia y Amigos
                             </h2>
                         </div>
 
-                        <!-- TEXTO DESCRIPTIVO -->
-                        <div class="text-center mb-8" id="texto-regalos">
+                        <!-- LÍNEA DECORATIVA -->
+                        <div
+                            class="flex items-center justify-center gap-2 mb-6"
+                        >
+                            <div class="w-10 h-px bg-white/40"></div>
+                            <div class="w-1.5 h-1.5 rounded-full bg-white/60">
+                            </div>
+                            <div class="w-10 h-px bg-white/40"></div>
+                        </div>
+
+                        <!-- TEXTO PRINCIPAL -->
+                        <div
+                            class="text-center space-y-5 mb-8"
+                            id="texto-despedida"
+                        >
                             <p
                                 class="font-cormorant text-xl text-white leading-relaxed"
                             >
-                                <!-- Tu presencia es lo más importante para nosotros.
-                                Por falta de espacio, se tendrán sobres
-                                disponibles; si deseas tener un detalle, también
-                                puedes hacerlo a través del QR. <br />
-                                ¡Gracias por tu cariño! -->
-
-                                El mejor regalo es tu presencia, pero si deseas
-                                tener un detalle con nosotros, te dejamos esta
-                                opción.
+                                Nos llena de felicidad poder compartir con
+                                ustedes este momento tan único y especial.
+                            </p>
+                            <p
+                                class="font-cormorant text-xl text-white leading-relaxed"
+                            >
+                                Con la esperanza de que hagamos de este día un
+                                recuerdo inolvidable.
+                            </p>
+                            <p
+                                class="font-cormorant text-xl text-white leading-relaxed"
+                            >
+                                Los esperamos con los corazones llenos de
+                                emoción, listos para celebrar el amor y crear
+                                memorias que permanezcan siempre en nuestros
+                                corazones.
                             </p>
                         </div>
 
-                        <!-- QR CODE -->
-                        <div class="mb-4 bg-white p-3 rounded-lg" id="qr-code">
-                            <img
-                                src="/imagenes/qr.png"
-                                alt="QR Mesa de Regalos"
-                                class="w-56 h-56 object-contain"
-                            />
+                        <!-- LÍNEA DECORATIVA -->
+                        <div
+                            class="flex items-center justify-center gap-2 mb-6"
+                        >
+                            <div class="w-10 h-px bg-white/40"></div>
+                            <div class="w-1.5 h-1.5 rounded-full bg-white/60">
+                            </div>
+                            <div class="w-10 h-px bg-white/40"></div>
                         </div>
 
-                        <!-- NÚMERO DE CUENTA -->
-                        <div id="numero-cuenta" class="text-center">
-                            <p
-                                class="font-cormorant text-lg text-white font-semibold tracking-wide"
+                        <!-- CORAZÓN -->
+                        <div class="mb-6" id="corazon-despedida">
+                            <svg
+                                class="w-6 h-6 text-[#c9a961]"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
                             >
-                                Banco: Nombre del Banco<br />
-                                Nombre: Nombre Apellido Apellido<br />
-                                Número de cuenta: 000000000000<br />
-                                Concepto: Regalo para los novios
+                                <path
+                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                                ></path>
+                            </svg>
+                        </div>
+
+                        <!-- TE ESPERAMOS -->
+                        <div class="text-center" id="te-esperamos">
+                            <p
+                                class="font-great-vibes text-[2rem] text-white leading-tight"
+                            >
+                                Te esperamos
                             </p>
                         </div>
                     </div>
@@ -86,9 +119,6 @@
         </div>
     </div>
 
-    <!-- ═══════════════════════════════════════════════════════════ -->
-    <!-- 🎬 ANIMACIONES CON GSAP - SOLO AL BAJAR                     -->
-    <!-- ═══════════════════════════════════════════════════════════ -->
     <script>
         import { gsap } from "gsap";
         import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -97,14 +127,9 @@
 
         if (typeof window !== "undefined") {
             document.addEventListener("DOMContentLoaded", () => {
-                // Animación del botón decorativo
                 gsap.fromTo(
-                    "#boton-decorativo-regalos",
-                    {
-                        opacity: 0,
-                        scale: 0,
-                        rotation: -180,
-                    },
+                    "#boton-decorativo-despedida",
+                    { opacity: 0, scale: 0, rotation: -180 },
                     {
                         opacity: 1,
                         scale: 1,
@@ -112,21 +137,16 @@
                         duration: 1,
                         ease: "back.out(1.7)",
                         scrollTrigger: {
-                            trigger: "#card-regalos",
+                            trigger: "#card-despedida",
                             start: "top 80%",
                             toggleActions: "play none none reset",
                         },
                     },
                 );
 
-                // Animación de la card
                 gsap.fromTo(
-                    "#card-principal-regalos",
-                    {
-                        opacity: 0,
-                        y: 50,
-                        scale: 0.95,
-                    },
+                    "#card-principal-despedida",
+                    { opacity: 0, y: 50, scale: 0.95 },
                     {
                         opacity: 1,
                         y: 0,
@@ -134,40 +154,32 @@
                         duration: 1,
                         ease: "power3.out",
                         scrollTrigger: {
-                            trigger: "#card-regalos",
+                            trigger: "#card-despedida",
                             start: "top 80%",
                             toggleActions: "play none none reset",
                         },
                     },
                 );
 
-                // Animación del título
                 gsap.fromTo(
-                    "#titulo-regalos",
-                    {
-                        opacity: 0,
-                        y: -20,
-                    },
+                    "#titulo-despedida",
+                    { opacity: 0, y: -20 },
                     {
                         opacity: 1,
                         y: 0,
                         duration: 0.8,
                         ease: "power2.out",
                         scrollTrigger: {
-                            trigger: "#card-regalos",
+                            trigger: "#card-despedida",
                             start: "top 80%",
                             toggleActions: "play none none reset",
                         },
                     },
                 );
 
-                // Animación del texto
                 gsap.fromTo(
-                    "#texto-regalos",
-                    {
-                        opacity: 0,
-                        y: 20,
-                    },
+                    "#texto-despedida",
+                    { opacity: 0, y: 20 },
                     {
                         opacity: 1,
                         y: 0,
@@ -175,20 +187,16 @@
                         delay: 0.2,
                         ease: "power2.out",
                         scrollTrigger: {
-                            trigger: "#card-regalos",
+                            trigger: "#card-despedida",
                             start: "top 80%",
                             toggleActions: "play none none reset",
                         },
                     },
                 );
 
-                // Animación del QR
                 gsap.fromTo(
-                    "#qr-code",
-                    {
-                        opacity: 0,
-                        scale: 0.8,
-                    },
+                    "#corazon-despedida",
+                    { opacity: 0, scale: 0 },
                     {
                         opacity: 1,
                         scale: 1,
@@ -196,20 +204,16 @@
                         delay: 0.4,
                         ease: "back.out(1.7)",
                         scrollTrigger: {
-                            trigger: "#card-regalos",
+                            trigger: "#card-despedida",
                             start: "top 80%",
                             toggleActions: "play none none reset",
                         },
                     },
                 );
 
-                // Animación del número de cuenta
                 gsap.fromTo(
-                    "#numero-cuenta",
-                    {
-                        opacity: 0,
-                        y: 20,
-                    },
+                    "#te-esperamos",
+                    { opacity: 0, y: 20 },
                     {
                         opacity: 1,
                         y: 0,
@@ -217,7 +221,7 @@
                         delay: 0.6,
                         ease: "power2.out",
                         scrollTrigger: {
-                            trigger: "#card-regalos",
+                            trigger: "#card-despedida",
                             start: "top 80%",
                             toggleActions: "play none none reset",
                         },

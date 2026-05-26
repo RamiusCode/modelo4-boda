@@ -32,18 +32,24 @@
 
                     <!-- Contenido de la card -->
                     <div
-                        class="relative px-4 py-12 z-10 flex flex-col items-center justify-center min-h-[200px]"
+                        class="relative px-4 pt-16 pb-12 z-10 flex flex-col items-center justify-center min-h-[200px]"
                     >
+                        <!-- ICONO -->
+                        <div class="mb-4">
+                            <img
+                                src="/imagenes/restriccion.png"
+                                alt="Sin niños"
+                                class="w-16 h-16 mx-auto object-contain icono-restriccion"
+                            />
+                        </div>
+
                         <!-- TEXTO PRINCIPAL -->
                         <div class="text-center" id="texto-acompanantes">
                             <p
                                 class="font-crimson text-xl leading-relaxed text-[#122a4d]"
                             >
-                                Aunque amamos a sus pequeños esta día especial
-                                es solo para Adultos, le pedimos venga
-                                acompañado <span class="font-bold"
-                                    >SIN NIÑOS.</span
-                                >
+                                Aunque amamos a sus pequeños, este día especial
+                                es solo para adultos. Agradecemos su comprensión.
                             </p>
                         </div>
                     </div>
@@ -81,7 +87,7 @@
                     scrollTrigger: {
                         trigger: "#card-acompanantes",
                         start: "top 80%",
-                        toggleActions: "play none none none",
+                        toggleActions: "play none none reset",
                     },
                 },
             );
@@ -103,7 +109,7 @@
                     scrollTrigger: {
                         trigger: "#card-acompanantes",
                         start: "top 80%",
-                        toggleActions: "play none none none",
+                        toggleActions: "play none none reset",
                     },
                 },
             );
@@ -124,10 +130,17 @@
                     scrollTrigger: {
                         trigger: "#card-acompanantes",
                         start: "top 80%",
-                        toggleActions: "play none none none",
+                        toggleActions: "play none none reset",
                     },
                 },
             );
         });
     }
 </script>
+
+<style>
+    .icono-restriccion {
+        filter: brightness(0) saturate(100%) invert(14%) sepia(50%)
+            saturate(1847%) hue-rotate(188deg) brightness(95%) contrast(95%);
+    }
+</style>

@@ -3,7 +3,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- 📇 CARD DE NUESTROS PADRES -->
         <div class="flex justify-center">
-            <div class="relative w-[280px]" id="card-padres">
+            <div class="relative w-full max-w-5xl" id="card-padres">
                 <!-- BOTÓN DECORATIVO SUPERIOR -->
                 <div
                     class="absolute z-20"
@@ -31,7 +31,7 @@
                     />
 
                     <!-- Contenido de la card -->
-                    <div class="relative px-4 py-10 z-10">
+                    <div class="relative px-2 pt-16 pb-10 z-10">
                         <!-- TÍTULO PRINCIPAL -->
                         <div class="text-center mb-6">
                             <h2
@@ -42,35 +42,48 @@
                             </h2>
                         </div>
 
-                        <!-- PADRES DEL NOVIO -->
-                        <div class="text-center mb-5" id="seccion-novia">
-                            <h3
-                                class="font-crimson text-xl uppercase tracking-wider text-[#122a4d] font-semibold mb-2"
-                            >
-                                PADRES DEL NOVIO
-                            </h3>
-                            <p
-                                class="font-cormorant-sc text-lg leading-relaxed text-[#122a4d]"
-                            >
-                                José Luis Mendoza Miranda<br />
-                                Jhannet Padilla Torrez
-                            </p>
-                        </div>
 
-                        <!-- PADRES DE LA NOVIA -->
+                         <!-- PADRES DE LA NOVIA -->
                         <div class="text-center" id="seccion-novio">
                             <h3
-                                class="font-crimson text-xl uppercase tracking-wider text-[#122a4d] font-semibold mb-2"
+                                class="font-crimson text-base uppercase tracking-wider text-[#122a4d] font-semibold mb-2"
                             >
                                 PADRES DE LA NOVIA
                             </h3>
                             <p
                                 class="font-cormorant-sc text-lg leading-relaxed text-[#122a4d]"
                             >
-                                Víctor Camacho<br />
-                                Catalina Cossio Vargas
+                                Carlos Alberto Vargas Torrico
+                                <br />
+                                Rosa Elena Mamani de Vargas
                             </p>
                         </div>
+
+                        
+                        <!-- SEPARADOR -->
+                        <div class="flex items-center justify-center my-3 px-8">
+                            <div class="flex-1 h-px bg-[#122a4d]/20"></div>
+                            <div class="mx-4 text-[#122a4d]/40 text-lg">✦</div>
+                            <div class="flex-1 h-px bg-[#122a4d]/20"></div>
+                        </div>
+
+                        <!-- PADRES DEL NOVIO -->
+                        <div class="text-center mb-5" id="seccion-novia">
+                            <h3
+                                class="font-crimson text-base uppercase tracking-wider text-[#122a4d] font-semibold mb-2"
+                            >
+                                PADRES DEL NOVIO
+                            </h3>
+                            <p
+                                class="font-cormorant-sc text-lg leading-relaxed text-[#122a4d]"
+                            >
+                                Jorge Luis Suárez Hurtado
+                                <br />
+                                Ana María Salvatierra de Suárez
+                            </p>
+                        </div>
+
+                       
                     </div>
                 </div>
             </div>
@@ -94,7 +107,7 @@
                 scrollTrigger: {
                     trigger: "#card-padres",
                     start: "top 80%",
-                    once: true,
+                    toggleActions: "play none none reset",
                 },
             });
 

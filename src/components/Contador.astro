@@ -15,7 +15,7 @@
                 />
 
                 <!-- Overlay opcional -->
-                <div class="absolute inset-0 bg-black/20"></div>
+                <div class="absolute inset-0"></div>
 
                 <!-- Contenido encima del fondo -->
                 <div class="relative z-10">
@@ -144,10 +144,10 @@
             // 📅 MODIFICA AQUÍ LA FECHA Y HORA DE TU EVENTO
             const FECHA_EVENTO = {
                 año: 2026,
-                mes: 4, // Abril (1=Enero, 2=Febrero, 3=Marzo, 4=Abril, etc.)
-                dia: 25,
-                hora: 13, // Formato 24 horas (13 = 1:00 PM)
-                minutos: 30,
+                mes: 12, // Diciembre (1=Enero, 2=Febrero, 3=Marzo, 4=Abril, etc.)
+                dia: 26,
+                hora: 15, // Formato 24 horas (13 = 1:00 PM)
+                minutos: 0,
             };
 
             // Construir fecha del evento
@@ -231,7 +231,7 @@
                     scrollTrigger: {
                         trigger: "#card-contador",
                         start: "top 85%",
-                        toggleActions: "play none none none",
+                        toggleActions: "play none none reset",
                     },
                 },
             );
@@ -250,7 +250,7 @@
                     scrollTrigger: {
                         trigger: "#card-contador",
                         start: "top 85%",
-                        toggleActions: "play none none none",
+                        toggleActions: "play none none reset",
                     },
                 },
             );
@@ -272,7 +272,7 @@
                     scrollTrigger: {
                         trigger: "#card-contador",
                         start: "top 85%",
-                        toggleActions: "play none none none",
+                        toggleActions: "play none none reset",
                     },
                 },
             );
@@ -292,7 +292,7 @@
                     scrollTrigger: {
                         trigger: "#card-contador",
                         start: "top 85%",
-                        toggleActions: "play none none none",
+                        toggleActions: "play none none reset",
                     },
                 },
             );
